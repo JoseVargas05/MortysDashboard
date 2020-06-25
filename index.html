@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./img/favicon-96x96.png">
+    <title>Mortys</title>
+    <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!--Show cards-->
+        <div class="main">
+            <div class="titles">
+                <h2>Mortys Dashboard</h2>
+            </div>
+            <div class="search">
+                <input type="text" id="buscar" placeholder="Buscar Morty">
+                <svg xmlns="http://www.w3.org/2000/svg" height="50" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M11.5 9C10.12 9 9 10.12 9 11.5s1.12 2.5 2.5 2.5 2.5-1.12 2.5-2.5S12.88 9 11.5 9zM20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-3.21 14.21l-2.91-2.91c-.69.44-1.51.7-2.39.7C9.01 16 7 13.99 7 11.5S9.01 7 11.5 7 16 9.01 16 11.5c0 .88-.26 1.69-.7 2.39l2.91 2.9-1.42 1.42z"/></svg>
+            </div>
+            <div class="cards">
+               
+
+            </div>
+        </div>
+        <!--add Button-->
+        <div class="add" id="add">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" height="55px"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+        </div>
+    </div>
+     <!--Full update, delete, add-->
+     <div class="container full">
+        <div class="main">
+            <div class="content">
+                <div class="close" id="close">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="36px" height="36px"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"/></svg>
+                </div>
+                <div class="pic">
+                    <img src="./img/mortys/normal.png" alt="" class="picMor picMor_b">
+                </div>
+                <div class="stats">
+                    <div class="name name_b">Morty</div>
+                    <div class="dimension dimension_b">Mortopia</div>
+                    <div class="type type_b">* Exotico</div>
+                    <div class="attack_b">Ataque: 45</div>
+                    <div class="def_b">Defensa: 45</div>
+                    <div class="velocidad_b">Velocidad: 40</div>
+                    <div class="ps_b">PS: 45</div>
+                    <div class="xp_b">XP: 50</div>
+                   <!-- <div class="name"><input type="text" value="Morty"></div>
+                    <div class="dimension">
+                            <select id="dimensionsOptions">
+                            <option value="Mortopia" selected>Mortopia</option>
+                            <option value="Mortyland">Mortyland</option>
+                            <option value="Plumbubo Prime 51b">Plumbubo Prime 51b</option>
+                            <option value="GF Mortanic" >GF Mortanic</option>
+                          </select>
+                    </div>
+                    <div class="type">
+                        <select id="tiposOptions">
+                        <option value="1" >Común</option>
+                        <option value="2">Raro</option>
+                        <option value="3">Épico</option>
+                        <option value="4" selected>Exótico</option>
+                      </select>
+                    </div>
+                    <div class="attack">Ataque: <input type="text" value="45"></div>
+                    <div class="def">Defensa: <input type="text" value="45"></div>
+                    <div class="velocidad">Velocidad: <input type="text" value="40"></div>
+                    <div class="ps">PS: <input type="text" value="45"></div>
+                    <div class="xp">XP: <input type="text" value="50"></div>-->
+                </div>
+            </div>
+            <div class="options show">
+                <div class="delete" id="delete"><button>Eliminar Morty</button></div>
+                <div class="edit" id="edit"><button>Editar Morty</button></div>
+            </div>
+            <div class="aceptar">
+                <div class="acept" id="acept"><button>Guardar Morty</button></div>
+            </div>
+            <div class="aceptar_add">
+                <div class="acept" id="acept_add"><button>Guardar Morty</button></div>
+            </div>
+        </div>
+    </div>
+    <!-- Select picture -->
+    <div class="container full_p">
+        <div class="close" id="close_p">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="36px" height="36px"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"/></svg>
+        </div>
+        <div class="cards_pic">
+            <div class="card_pic" value="antiguo">
+                <img src="./img/mortys/antiguo.png" alt="">
+            </div>
+            <div class="card_pic" value="autodefensa">
+                <img src="./img/mortys/autodefensa.png" alt="">
+            </div>
+            <div class="card_pic" value="barbudo">
+                <img src="./img/mortys/barbudo.png" alt="">
+            </div>
+            <div class="card_pic" value="camisetaazul">
+                <img src="./img/mortys/camisetaazul.png" alt="">
+            </div>
+            <div class="card_pic" value="camisetanaranja">
+                <img src="./img/mortys/camisetanaranja.png" alt="">
+            </div>
+            <div class="card_pic" value="camisetaroja">
+                <img src="./img/mortys/camisetaroja.png" alt="">
+            </div>
+            <div class="card_pic" value="camisetaverde">
+                <img src="./img/mortys/camisetaverde.png" alt="">
+            </div>
+            <div class="card_pic" value="conejo">
+                <img src="./img/mortys/conejo.png" alt="">
+            </div>
+            <div class="card_pic" value="conejomalvado">
+                <img src="./img/mortys/conejomalvado.png" alt="">
+            </div>
+            <div class="card_pic" value="dobleviejo">
+                <img src="./img/mortys/dobleviejo.png" alt="">
+            </div>
+            <div class="card_pic" value="hipster">
+                <img src="./img/mortys/hipster.png" alt="">
+            </div>
+            <div class="card_pic" value="jerryjuegos">
+                <img src="./img/mortys/jerryjuegos.png" alt="">
+            </div>
+            <div class="card_pic" value="karateka">
+                <img src="./img/mortys/karateka.png" alt="">
+            </div>
+            <div class="card_pic" value="mendigo">
+                <img src="./img/mortys/mendigo.png" alt="">
+            </div>
+            <div class="card_pic" value="normal">
+                <img src="./img/mortys/normal.png" alt="">
+            </div>
+            <div class="card_pic" value="poket">
+                <img src="./img/mortys/pocket.png" alt="">
+            </div>
+            <div class="card_pic" value="prototipo1">
+                <img src="./img/mortys/prototipo1.png" alt="">
+            </div>
+            <div class="card_pic" value="prototipo46">
+                <img src="./img/mortys/prototipo46.png" alt="">
+            </div>
+            <div class="card_pic" value="prototipo72">
+                <img src="./img/mortys/prototipo72.png" alt="">
+            </div>
+            <div class="card_pic" value="ronoso">
+                <img src="./img/mortys/ronoso.png" alt="">
+            </div>
+            <div class="card_pic" value="sinojos">
+                <img src="./img/mortys/sinojos.png" alt="">
+            </div>
+            <div class="card_pic" value="sinpiedad">
+                <img src="./img/mortys/sinpiedad.png" alt="">
+            </div>
+            <div class="card_pic" value="sucio">
+                <img src="./img/mortys/sucio.png" alt="">
+            </div>
+            <div class="card_pic" value="tresojos">
+                <img src="./img/mortys/tresojos.png" alt="">
+            </div>
+            <div class="card_pic" value="tuerto">
+                <img src="./img/mortys/tuerto.png" alt="">
+            </div>
+            <div class="card_pic" value="viejo">
+                <img src="./img/mortys/viejo.png" alt="">
+            </div>
+            <div class="card_pic" value="vigotes">
+                <img src="./img/mortys/vigotes.png" alt="">
+            </div>
+        </div>
+    </div>
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

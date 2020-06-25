@@ -1,0 +1,381 @@
+body{
+ text-align:center;
+ margin:0 auto;
+ padding:0px;
+ background-color: #ffffff;
+ padding-top: 20px;
+ padding-bottom: 20px;
+ padding-left: 15px;
+ padding-right: 15px;
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+ font-weight: 600;
+
+}
+
+/* Title Main */
+.titles{
+    text-align: left;
+    background-color: #ffe672;
+    border-radius: 15px;
+    padding: 10px;
+
+    width: 100%;
+    max-width: 1354px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Search option */
+.search{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 950px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.search input{
+    background-color: #efeded;
+    border-style: none;
+    width: 75%;
+    height: 30px;
+    border-radius: 8px;
+    border: 1px solid #dad4d4;
+}
+.search svg{
+    margin-top: -9px;
+    fill: #ff8e5b;
+}
+
+/* Add Button */
+.add{
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+}
+.add svg{
+    fill: #f14e30;
+}
+
+/* Cards */
+.container{
+    background-color: #ffffff;
+    border-radius: 25px;
+    padding: 5px;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 1354px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.card{
+    position: relative;
+    background-color: #fde9d0;
+    border-radius: 25px;
+    width: 43.2%;
+    padding: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 15px;
+    margin: 3px;
+    max-width: 245px;
+    min-width: 144px;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.card img{
+    position: relative;
+    width: 50px;
+}
+.card .stats{
+    text-align: center;
+    font-size: 0.72em;
+}
+
+.card .stats .name{
+    margin-top: 5px;
+    color: #ec8519;
+    font-size: 1em;
+}
+.card .stats .dimension{
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+.card .stats .type{
+    color:#c219ec;
+}
+
+/* Full */
+
+.full{
+    position: fixed;
+    background-color: transparent;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    transform: scale(0);
+    pointer-events: none;
+}
+.fullOpen{
+    background-color: #f3f3f3 !important;
+    pointer-events: all !important;
+    transform: scale(1) !important;
+}
+
+.full .main{
+    position: relative;
+    
+    width: 90%;
+    height: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border-radius: 25px;
+}
+.full .content{
+    background: #e3fcf0;
+    height: 62vh;
+    border-radius: 25px;
+    margin-bottom: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: 0.5s;
+    justify-content: space-evenly;
+
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+.full .options{
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 15%;
+    border-radius: 25px;
+}
+.full .aceptar,.full .aceptar_add{
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 15%;
+    border-radius: 25px;
+}
+.full .options div{
+    width: 45%;
+    
+    max-width: 300px;
+}
+.full .options div button{
+    width: 95%;
+    height: 35px;
+    border-radius: 15px;
+    border-style: none;
+}
+.full .aceptar .acept,.full .aceptar_add .acept{
+    width: 95%;
+    height: 35px;
+
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+.full .aceptar .acept button,.full .aceptar_add .acept button{
+    width: 95%;
+    height: 35px;
+    border-radius: 15px;
+    border-style: none;
+    background-color: #ffe35e;
+    font-weight: bold;
+}
+
+.full .options div:first-of-type button{
+    background-color: #ec8519;
+    font-weight: bold;
+}
+.full .options div:last-of-type button{
+    background-color: #ffe35e;
+    font-weight: bold;
+
+}
+.show{
+    display: flex !important;
+}
+.full .pic img{
+    height: 250px;
+}
+
+.full .stats{
+    text-align: center;
+    font-size: 1em;
+    margin-top: 2vh;
+}
+
+.full .stats .name{
+    color: #ec8519;
+    font-size: 1em;
+}
+.full .stats .dimension{
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+.full .stats .type{
+    color:#c219ec;
+}
+.full .close{
+    position: absolute;
+    right: 12px;
+    top: 12px;
+}
+.full .close svg{
+    fill: #f14e30;
+}
+
+
+/* Types cards */
+/* Común */
+.comunCard{
+    background-color: #e3e6e3 !important;
+}
+.titleComun{
+    color: #0120b9 !important;
+}
+
+/* Rara */
+.raraCard{
+    background-color: #d2fdd0 !important;
+}
+.titleRara{
+    color: #0baf00 !important;
+}
+
+/* Épica */
+.epicCard{
+    background-color: #f9f8ad !important;
+}
+.titleEpic{
+    color: #c7a600 !important;
+}
+
+/* Exótica */
+.exoticCard{
+    background-color: #eacbff !important;
+}
+.titleExotic{
+    color: #8400c7 !important;
+}
+
+/* Legendaria */
+.legendCard{
+
+}
+.titleLegend{
+
+}
+
+/* Campos Editar */
+.content input, select{
+    text-align: center;
+    width: 100px;
+    background: none;
+    border-style: none;
+    font-weight: bolder;
+    border: 1px solid #b5b5b5;
+    border-radius: 15px;
+    margin-bottom: 2px;
+    padding: 2px;
+}
+
+.content .stats .attack input, .content .stats .def input, .content .stats .velocidad input, .content .stats .ps input, .content .stats .xp input {
+    width: 50px;
+  }
+
+  /* Select image Morty */
+  .full_p{
+    position: absolute;
+    /*width: 100vw;*/
+    background-color: #efeded;
+    top: 0;
+    left: 0;
+    border-radius: 0px;
+    overflow-x: hidden;
+
+    transition: 0.5s;
+    transform: scale(0);
+  }
+  .full_p .cards_pic{
+    /*width: 95%;*/
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    align-items: center;
+    justify-content: center;
+  }
+  .full_p .cards_pic .card_pic{
+    position: relative;
+    background-color: #d9f5c2;
+    border-radius: 25px;
+    width: 43.2%;
+    padding: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 15px;
+    margin: 3px;
+
+    min-height: 108.328px;
+    max-height: 108.328px;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .full_p .cards_pic .card_pic img{
+    position: relative;
+    width: 50px;
+  }
+  .full_p .close{
+    text-align: right;
+    margin: 20px;
+  }
+  .full_p .close svg{
+    fill: #f14e30;
+}
+
+/* Media querys */
+
+@media only screen and (max-width: 370px) {
+    
+.card{
+    width: 100%;
+}
+}
